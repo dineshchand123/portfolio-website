@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<main class="main">
+  <!-- Hero Section -->
+  <section id="hero" class="hero section position-relative">
+
+    <!-- Image -->
+    <img src="/static/images/hero1.png" alt="Hero Image" class="img-fluid w-100">
+
+    <!-- Text Overlay -->
+    <div class="position-absolute text-center" style="top:30%; left: 50%; transform: translate(-50%, 0);">
+      <h2>DINESH CHAND</h2>
+      <p>Hello my name is Dinesh Chand from Nepalgunj.</p>
+      <a href="/about" class="btn btn-secondary">About Me</a>
+    </div>
+  </section>
+</main>
+
+{% endblock body %}

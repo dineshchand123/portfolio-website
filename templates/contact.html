@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+
+<div class="container ">
+    <!--Contact Us with bequtifull side line-->
+    <div class="contact">
+      <div class="d-flex align-items-center justify-content-center my-4">
+          <div class="bg-secondary" style="height: 2px; width: 50px;"></div>
+             <h2 class="mx-3">Contact Us</h2>
+            <div class="bg-secondary" style="height: 2px; width: 50px;"></div>  
+       </div>
+       <p class="text-center">Please do not hesitate to contact me if you have any questions or require additional information.</p> 
+    </div> <!--end side line-->
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post" action="/contact">
+                {% csrf_token %}
+                <div class="form-group my-3">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="enter your name" required>
+                </div>
+                <div class="form-group my-3">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="enter your email" required>
+                </div>
+                <div class="form-group my-3">
+                    <label for="phone">Phone Number</label>
+                    <input type="phone" class="form-control" id="phone" name="phone" placeholder="enter your phone number" required>
+                </div>
+                <div class="form-group my-3">
+                    <label for="desc">Tell me about what you want to contact me for...</label>
+                    <textarea class="form-control" id="desc" rows="3" name="desc" placeholder="Enter your message" required></textarea>
+                </div>
+                <div class="form-group my-3">
+                    <button type="submit" class="btn btn-secondary">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>             
+{% endblock body %}
